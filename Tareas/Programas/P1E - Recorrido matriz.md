@@ -5,7 +5,7 @@ Realice el programa que dada una matriz de $n*m$, en donde el usuario introducir
 
  2. Recorrido por columnas comenzando desde $nm$, $n-1m$, $n-2m$, hasta 0m, para continuar con $nm-1$, $n-1m-1$, $n-2m$ ... $0m-1$ ..  el proceso deberá continuar hasta llegar a la casilla 00
 
- 3. Realice el recorrido en diagonal desde la casilla 00, 11, 22, 33, siempre que $n=m$, considere el caso donde $n!=m$, $n&ltm$ o $n&gtm$
+ 3. Realice el recorrido en diagonal desde la casilla 00, 11, 22, 33, siempre que $n=m$, considere el caso donde $n!=m$, n&ltm o n&gtm
 
 ![diagram0](../Resources/recorridos_mat_e.png) 
 
