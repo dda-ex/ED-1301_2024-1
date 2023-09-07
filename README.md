@@ -43,6 +43,7 @@ data_structure/
 ### Tareas a mano
  * T1 Video Erroes en JVM - 20 de agosto de 2023
  * T2 Lista doblemente ligada - 1 de septiembre de 2023
+ * T3 Lista doblemente ligada circular - 13 de septiembre de 2023
 
 ### Programas
  * P1E - Recorrido de matriz bidimensional
