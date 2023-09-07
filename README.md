@@ -49,6 +49,7 @@ data_structure/
  * P1E - Recorrido de matriz bidimensional
  * P2E - Descomposición del número de cuenta
  * P3D - Descomposición del número de cuenta
+ * P4 - Realice el programa main para el uso de la estructura de datos de la lista dlist considerando los archivos dlist.h y dlist.c
 
 #### Nota:
 Se recomienda la revisón del programa de lectura de argumentos desde la línea de comandos para la generación de los programas P2E y P3D.
