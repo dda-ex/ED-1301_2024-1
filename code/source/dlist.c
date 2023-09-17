@@ -24,7 +24,7 @@ void dlist_init (DList *list, void (*destroy)(void *data)) {
 void dlist_destroy (DList *list) {
     void *data;
 
-    while(dlist_size(list) > 0) {
+    while (dlist_size(list) > 0) {
         if (dlist_remove(list, dlist_tail(list), (void **)&data) == 0 && list->destroy != NULL) {
             list->destroy(data);
         }
@@ -48,7 +48,7 @@ int dlist_ins_next (DList *list, DListNode *node, const void *data ) {
 
     new_node->data = (void *)data;
 
-    // The list is empty, insert at the head
+    // The list is empty?, insert at the head
     if (dlist_size(list) == 0){
         list->head = new_node;
         list->head->prev = NULL;
@@ -56,13 +56,15 @@ int dlist_ins_next (DList *list, DListNode *node, const void *data ) {
         list->tail = new_node;
         
     } else {
+        // Insert at the middle or end of the dlist (tail)
         new_node->next = node->next;
         new_node->prev = node;
 
+        // Is the last node?
         if (node->next == NULL)
-            list->tail = new_node;
+            list->tail = new_node; // yes
         else
-            node->next->prev = new_node;
+            node->next->prev = new_node; // no
 
         node->next = new_node;
     }
@@ -87,7 +89,7 @@ int dlist_ins_prev (DList *list, DListNode *node, const void *data ) {
 
     new_node->data = (void *)data;
 
-    // The list is empty, insert at the head
+    // The list is empty?, insert at the head
     if (dlist_size(list) == 0){
         list->head = new_node;
         list->head->prev = NULL;
@@ -95,13 +97,15 @@ int dlist_ins_prev (DList *list, DListNode *node, const void *data ) {
         list->tail = new_node;
         
     } else {
+    // Insert at the middle or end of the dlist (head)
         new_node->next = node;
         new_node->prev = node->prev;
 
+        // Is the first node?
         if (node->prev == NULL)
-            list->head = new_node;
+            list->head = new_node; // yes
         else
-            node->prev->next = new_node;
+            node->prev->next = new_node; // no
 
         node->prev = new_node;
     }
@@ -116,27 +120,30 @@ int dlist_ins_prev (DList *list, DListNode *node, const void *data ) {
 */
 int dlist_remove (DList *list, DListNode *node, void **data) {
 
-    // Check if is not empty the list or head-tail node
+    // Check if is not empty the list
     if (node == NULL && dlist_size(list) == 0)
         return -1;
     
     *data = node->data;
 
+    // The node to remove is at the head of the dlist
     if (node == list->head) {
         list->head = node->next;
 
+        // Is the lastest node?
         if (list->head == NULL)
-            list->tail = NULL;
+            list->tail = NULL; // yes, there's not any node
         else 
-            node->next->prev = NULL;
+            node->next->prev = NULL; // no, there are one o more nodes
 
     } else {
-        node->prev->next = node->next;
+        node->prev->next = node->next; 
 
-        if (node->next == NULL)
-            list->tail = node->prev;
+        // Is the lastest node?
+        if (node->next == NULL) 
+            list->tail = node->prev; // yes
         else
-            node->next->prev = node->prev;
+            node->next->prev = node->prev; // no
     }
 
     free(node);
@@ -144,4 +151,3 @@ int dlist_remove (DList *list, DListNode *node, void **data) {
 
     return 0;
 }
-
