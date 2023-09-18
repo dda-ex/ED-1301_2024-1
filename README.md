@@ -57,6 +57,9 @@ Se recomienda la revisón del programa de lectura de argumentos desde la línea 
 ### Adicional
  * PE y PD Programa de matriz de Gauss (2) - TBD
 
+### Entrega
+La entrega de los programás deberá ser en git
+
 ## Avance de tareas
 En el siguiente enlace puede consultar el avance de sus tareas y actividades:
 https://docs.google.com/spreadsheets/d/1JcTG1r4lr1C6OoixBwzshDFKfh56NlkGFFdNFusHz6g/edit?usp=sharing
