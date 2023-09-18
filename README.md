@@ -51,6 +51,18 @@ data_structure/
  * P3D - Descomposición del número de cuenta
  * P4 - Realice el programa main para el uso de la estructura de datos de la lista dlist considerando los archivos dlist.h y dlist.c
 
+## Tabla de programas
+| Programa | Include | Source |   Main   |   Makefile   |   Entrega  |      |
+|:--------:|:-------:|:------:|:--------:|:------------:|:----------:|:----:|
+|   list   |  **h**  |  **c** | **main** | **makefile** | 06/10/2023 |  int |
+|   dlist  |  **h**  |  **c** |          | **makefile** | 06/10/2023 |  int |
+|   clist  |  **h**  |        |          | **makefile** | 06/10/2023 | char |
+|  cdlist  |  **h**  |        |          | **makefile** | 06/10/2023 |  int |
+|   stack  |  **h**  |  **c** |          | **makefile** | 06/10/2023 |  int |
+|   queue  |  **h**  |  **c** | **main** | **makefile** | 06/10/2023 |  int |
+
+Los espacios vacios son programas que deberá realizar.
+
 #### Nota:
 Se recomienda la revisón del programa de lectura de argumentos desde la línea de comandos para la generación de los programas P2E y P3D.
 
